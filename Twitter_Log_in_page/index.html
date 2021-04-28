@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login on Twitter /Twitter</title>
+    <link rel="stylesheet" href="assets/reset.css">
+    <link rel="icon" href="assets/image/logo.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <section id="section">
+        <div class="center">
+            <img src="assets/image/logo.png" alt="Login">
+            <h1 id="h1">Log in to Twitter</h1>
+            <div class="inp-1"><input type="text" required ><span class="span">Name</span></div>
+            <div class="inp-2"><input type="password" required><span class="span">Password</span></div>
+            <div class="btn"><button type="submit">Log in</button></div>
+            <p><a class="forgot" href="#">Forgot password?</a><a class="sign" href="#">Sign Up for Twitter</a></p>
+        </div>
+    </section>
+
+
+
+    <script>
+        var forgot=document.querySelector(".forgot");
+        var sign=document.querySelector(".sign");
+        forgot.onclick=function(){
+        window.open('../Forgot/index.html','_self')
+    }
+
+    sign.onclick=function(){
+        window.open('../newpopup.html','_self')
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#section{
+    width: 100%;
+}
+#navbar{
+    width: 100%;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.left-side{
+    width: 52%;
+    height: 90vh;
+}
+.left-side img{
+width: 100%;
+height: 100%;
+}
+
+.right-side{
+    width: 48%;
+    height: 90vh;
+}
+
+.right-side .center{
+    padding: 3.5rem;
+    height: 100%;
+}
+
+.right-side .center #icon{
+    padding-bottom: 1.8rem;
+}
+
+.right-side .center #h1{
+    padding-top: 2rem;
+    padding-bottom:4rem;
+    font-family: TwitterChirpExtendedHeavy, Verdana, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+}
+.right-side .center #h2{
+    padding-bottom: 2rem;
+    font-family: TwitterChirpExtendedHeavy, Verdana, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+.right-side .buttons{
+    width: 100%;
+}
+.right-side .buttons .btn-1{
+    margin-bottom: 30px;
+}
+.right-side .buttons button{
+    width: 70%;
+    border-radius: 50px;
+    border: 0;
+    outline: 0;
+    padding: 1rem;
+    font-size: 17px;
+}
+.right-side .buttons .button1{
+  background-color: #1da1f2;
+  color: #fff;
+  font-weight:bold;
+}
+.right-side .buttons .button1:hover{
+    background-color: #187fc0;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+  }
+.right-side .buttons .button2{
+    background-color: #fff;
+    color: #1da1f2;
+    font-weight:bold;
+    border: 1px solid #1da1f2;
+  }
+  .right-side .buttons .button2:hover{
+    background-color: rgb(221, 220, 220);
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+
+
+#navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+      padding-top: 1rem;
+      max-width: 1300px;
+  }
+
+.container a{
+    margin-right: 0.5rem;
+    text-decoration: none;
+    color: rgb(58, 56, 56);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.container a:hover{
+    text-decoration: underline;
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+}
+#footer p{
+    color: rgb(58, 56, 56);
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+    opacity: 0.8;
+}
+
+
+/* MEDIA QUERY */
+@media screen and (max-width:1000px) {
+    
+    .row{
+        display: flex;
+        flex-direction:column-reverse;
+    }
+
+    .right-side .center{
+        padding: 1rem;
+        height: 100%;
+    }
+    .left-side{
+        width: 100%;
+        height:500px;
+        
+    }
+    .right-side{
+        width: 100%;
+        height: 500px;
+    }
+
+    .right-side .buttons{
+        width: 100%;
+    }
+    .right-side .buttons button{
+        width: 100%;
+        
+    }
+    .right-side .buttons .button1{
+        width: 48%;
+        float: left;
+    }
+    .right-side .buttons .button2{
+        width: 48%;
+        margin-left: 1rem;
+    }
+    .container{
+        width: 80%;
+    }
+     .container a{
+      margin-left: 5px;
+      text-align: center;
+   }
+}
+
+
+@media screen and (max-width:500px) {
+    .row{
+        display: flex;
+        flex-direction:column-reverse;
+    }
+
+
+    .right-side .center{
+        padding: 1rem;
+        height: 100%;
+    }
+    .left-side{
+        width: 100%;
+        height:600px;
+        
+    }
+    .right-side{
+    width: 100%;
+        height: 600px;
+    }
+
+    .right-side .buttons{
+        width: 100%;
+    }
+    .right-side .buttons button{
+        width: 100%;
+    }
+    .right-side .buttons .button1{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .right-side .buttons .button2{
+        width: 100%;
+        margin-left: 0;
+    }
+    .right-side .center #h1{
+        font-size: 30px;
+        
+    }
+    .right-side .center #h2{
+        font-size: 20px;
+        
+    }
+   .container{
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+   }
+   .container a{
+    margin-top: 8px;
+    margin-left: 0.5rem;
+    
+ }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style4.css">
+    <link rel="icon" href="icon.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../assets/images/logo.png" type="image/png" sizes="16x16">
+</head>
+<style>
+    button{
+        opacity: 0.5;
+    }
+</style>
+<body>
+<div class="popup-container">
+    <div class="inner">
+        <div class="icon-img-btn">
+            <i class="fas fa-times" onclick="before()"></i>
+            <img src="../assets/images/logo.png" alt="twitter">
+            <button class="btttn" type="button" disabled  >next</button>
+        </div>
+        <div class="items">
+            <h1 class="h1-item">We sent you a code</h1>
+             <p class="p-item">Enter it below to verify <span class="p-item"></span></p>
+             <div class="input-div"><input type="tel" class="verify" placeholder="Vertification code" onmousemove="next()"></div>
+             <span class="span-item">Didn't SMS?</span>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    a =document.querySelector('.verify')
+    b = document.querySelector('.btttn')
+    before =function(){
+        window.open('./popup3.html','_self')
+    }
+    next=function(){
+        $(function(){
+        $('input[type="tel"]').change(function(){
+            this.value = $.trim(this.value);
+        });
+    });
+       if(a.value.length > 0){
+          b.style.opacity =1
+          b.disabled =false
+          $('.btttn').on('click',function(){
+        window.open('./main.html')
+    })
+       }
+       else{
+        b.style.opacity =0.5
+          b.disabled =true
+       }
+
+       
+    }
+    
+    var userPhone = localStorage.getItem('Phone')
+    $('span.p-item').html(userPhone)
+    
+</script>
+</body>
+
+</html>
